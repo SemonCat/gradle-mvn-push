@@ -96,7 +96,7 @@ afterEvaluate { project ->
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
         classifier = 'javadoc'
-        charset= 'UTF-8'
+        encoding = 'utf-8'
         from androidJavadocs.destinationDir
         
     }
