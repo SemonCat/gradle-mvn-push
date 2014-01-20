@@ -96,7 +96,6 @@ afterEvaluate { project ->
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
         classifier = 'javadoc'
-        options.links("http://docs.oracle.com/javase/7/docs/api/");
         from androidJavadocs.destinationDir
         
     }
