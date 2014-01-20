@@ -39,6 +39,11 @@ def getRepositoryPassword() {
     return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
 }
 
+// set all java compilation to use UTF-8 encoding.
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 afterEvaluate { project ->
     uploadArchives {
         repositories {
